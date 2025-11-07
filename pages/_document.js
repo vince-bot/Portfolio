@@ -8,7 +8,7 @@ export default function Document() {
         name="description"
         content="Overview of my background, projects, and current programming and web development skills."
       />
-      <link rel="icon" href="/icon.png" />
+      <link rel="icon" href="/images/iconv2.webp" />
       <Head />
       <body className="antialiased">
         <Main />

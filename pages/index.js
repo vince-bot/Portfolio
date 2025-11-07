@@ -232,79 +232,79 @@ export default function Home() {
       name: "Project One",
       description: "Description for project one.",
       link: "https://bnc-development-bbfbe.web.app/",
-      image: "/images/project/bnc.png",
+      image: "/images/project/bnc.webp",
     },
     {
       name: "Project Three",
       description: "Description for project three.",
       link: "https://discovery-hospitality.pages.dev/",
-      image: "/images/project/hospitality.png",
+      image: "/images/project/hospitality.webp",
     },
     {
       name: "Project One",
       description: "Description for project one.",
       link: "https://www.questhotelsandresorts.com/",
-      image: "/images/project/quest.png",
+      image: "/images/project/quest.webp",
     },
     {
       name: "Project Two",
       description: "Description for project two.",
       link: "https://www.azurebeachclubs.com/",
-      image: "/images/project/azure1.png",
+      image: "/images/project/azure1.webp",
     },
     {
       name: "Project Three",
       description: "Description for project three.",
       link: "https://www.yantraseeds.com/",
-      image: "/images/project/yantra.png",
+      image: "/images/project/yantra.webp",
     },
     {
       name: "Project Three",
       description: "Description for project three.",
       link: "https://discoveryhospitality.com/",
-      image: "/images/project/discovery-hospitality.png",
+      image: "/images/project/discovery-hospitality.webp",
     },
     {
       name: "Project Three",
       description: "Description for project three.",
       link: "https://www.discoverysuites.com/",
-      image: "/images/project/suites.png",
+      image: "/images/project/suites.webp",
     },
     // {
     //   name: "Project One",
     //   description: "Description for project one.",
     //   link: "https://www.discoveryshoresboracay.com/",
-    //   image: "/images/project/shores.png",
+    //   image: "/images/project/shores.webp",
     // },
     {
       name: "Project Two",
       description: "Description for project two.",
       link: "https://www.clubparadisepalawan.com/",
-      image: "/images/project/club-paradise.png",
+      image: "/images/project/club-paradise.webp",
     },
     // {
     //   name: "Project Three",
     //   description: "Description for project three.",
     //   link: "https://discovery-primea.pages.dev/",
-    //   image: "/images/project/primea.png",
+    //   image: "/images/project/primea.webp",
     // },
     {
       name: "Project Three",
       description: "Description for project three.",
       link: "https://discoveryresorts.com.ph/",
-      image: "/images/project/discovery-resorts.png",
+      image: "/images/project/discovery-resorts.webp",
     },
     {
       name: "Project Three",
       description: "Description for project three.",
       link: "https://www.bpi.com.ph/",
-      image: "/images/project/bpi.png",
+      image: "/images/project/bpi.webp",
     },
     {
       name: "Project Three",
       description: "Description for project three.",
       link: "https://thevotingvault.com/",
-      image: "/images/project/voting-vault.png",
+      image: "/images/project/voting-vault.webp",
     },
   ];
 
@@ -358,7 +358,7 @@ export default function Home() {
           } lg:translate-x-0`}
         >
           <div className="flex items-center mb-10 gap-x-3">
-            <Image src={logo} alt="Logo" width={50} height={50} />
+            <Image src={logo} alt="Logo" width={50} height={50} priority />
             <div>
               <h2 className="text-xl font-bold">Vince</h2>
               <p className="text-sm text-gray-300">Front End Developer</p>
@@ -405,7 +405,7 @@ export default function Home() {
         {showScrollTop && (
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="fixed bottom-8 right-8 cursor-pointer bg-[#0073aa] text-white p-3 rounded-full shadow-lg hover:bg-[#1e3a5f] transition z-50"
+            className="fixed bottom-8 right-8 cursor-pointer bg-[#0073aa] text-white p-3 rounded-full shadow-lg hover:bg-[#1e3a5f] border-2 hover:border-white transition z-50"
             aria-label="Scroll to top"
           >
             <FaArrowUp size={20} />
@@ -441,7 +441,7 @@ export default function Home() {
                       Vince Quinaging,
                     </span>
                   </span>
-                  <span className="text-[20px] md:text-[50px] font-bold text-white">
+                  <span className="text-[20px] md:text-[50px] font-bold text-main-blue">
                     Front End Developer
                   </span>
                   <p className="mt-1 md:mt-6 text-white leading-relaxed">
@@ -451,7 +451,7 @@ export default function Home() {
                   </p>
 
                   <div>
-                    <button className="mt-6 px-6 py-3 uppercase cursor-pointer bg-[#0073aa] text-white rounded hover:bg-[#1e3a5f] w-fit">
+                    <button className="mt-6 px-6 py-3 text-sm uppercase cursor-pointer bg-[#0073aa] text-white rounded border-2 border-[#0073aa] hover:bg-transparent hover:border-[#ffffff] w-fit">
                       Hire me
                     </button>
                   </div>
@@ -462,6 +462,7 @@ export default function Home() {
                     alt="#"
                     width={1000}
                     height={1000}
+                    priority
                     className="object-cover w-[500px] h-full transition-all duration-500 ease-in-out"
                   />
                 </div>
@@ -625,6 +626,7 @@ export default function Home() {
                         alt={item.name}
                         width={1000}
                         height={1000}
+                        loading="lazy"
                         className="object-cover w-full h-full transition-all duration-500 ease-in-out"
                       />
 
@@ -662,7 +664,7 @@ export default function Home() {
                 <div className="flex justify-center">
                   <button
                     onClick={() => setShowAll(!showAll)}
-                    className="px-6 py-3 text-sm cursor-pointer bg-[#1e3a5f] text-white rounded hover:bg-[#122339] transition-all duration-500 ease-in-out transform "
+                    className="px-6 py-3 text-sm cursor-pointer bg-[#1e3a5f] text-white hover:text-[#1e3a5f] rounded hover:bg-transparent border-2 border-[#1e3a5f] hover:border-[#1e3a5f] transition-all duration-500 ease-in-out transform "
                   >
                     {showAll ? "View Less" : "View More"}
                   </button>
