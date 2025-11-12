@@ -360,7 +360,7 @@ export default function Home() {
           <div className="flex items-center mb-10 gap-x-3">
             <Image src={logo} alt="Logo" width={50} height={50} priority />
             <div>
-              <h2 className="text-xl font-bold">Vince</h2>
+              <h2 className="text-lg font-bold">Vince Quinaging</h2>
               <p className="text-sm text-gray-300">Front End Developer</p>
             </div>
           </div>
@@ -435,13 +435,13 @@ export default function Home() {
             <div className="container">
               <div className="flex flex-col lg:flex-row w-full h-full items-center gap-10">
                 <div className="flex flex-col w-full lg:w-1/2 order-2 text-center md:text-start">
-                  <span className="text-[10px] md:text-[50px] text-white">
+                  <span className="text-2xl md:text-[50px] text-white">
                     I'm{" "}
                     <span className="text-[#0073aa] italic font-semibold">
                       Vince Quinaging,
                     </span>
                   </span>
-                  <span className="text-[20px] md:text-[50px] font-bold text-main-blue">
+                  <span className="text-[20px] md:text-[50px] font-bold text-white">
                     Front End Developer
                   </span>
                   <p className="mt-1 md:mt-6 text-white leading-relaxed">
@@ -603,20 +603,23 @@ export default function Home() {
             <div className="container">
               <h2 className="text-4xl font-semibold ">Projects</h2>
               <hr className="border-2 border-[#0073aa] w-[50px] mb-4" />
-              <p className="text-gray-700 text-md pb-4">
-                Some of my works here speak for themselves, reflecting the
-                quality and attention to detail I bring to each project. I hope
-                they provide you with a better understanding of the wide range
-                of services I offer. I have hands-on experience working with the
-                latest technologies like React, Next.js, TailwindCSS, and
-                JavaScript, and I have built several websites from scratch.
-              </p>
-              <p className="text-gray-700 text-md">
-                Additionally, I integrate headless CMS solutions to enable
-                scalable and flexible content management. I also optimize site
-                performance, SEO, and Core Web Vitals to ensure top-tier user
-                engagement and visibility across search engines.
-              </p>
+              <div className="space-y-3 pb-5">
+                <p className="text-gray-700 text-md ">
+                  Some of my works here speak for themselves, reflecting the
+                  quality and attention to detail I bring to each project. I
+                  hope they provide you with a better understanding of the wide
+                  range of services I offer. I have hands-on experience working
+                  with the latest technologies like React, Next.js, TailwindCSS,
+                  and JavaScript, and I have built several websites from
+                  scratch.
+                </p>
+                <p className="text-gray-700 text-md pb-4">
+                  Additionally, I integrate headless CMS solutions to enable
+                  scalable and flexible content management. I also optimize site
+                  performance, SEO, and Core Web Vitals to ensure top-tier user
+                  engagement and visibility across search engines.
+                </p>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
                 {displayedProjects.map((item, index) => (
                   <div key={index} className="rounded shadow">
@@ -776,13 +779,13 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-white border-2">
+                  <div className="">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.129202832543!2d123.9514341!3d10.251162099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99af5406c22fd%3A0x9af2ac4715d5cc0c!2sCamolinas%20Chapel!5e0!3m2!1sen!2sph!4v1761381317909!5m2!1sen!2sph"
                       className="w-full"
                       height="350"
                       allowfullscreen=""
-                      loading="lazy"
+                      // loading="lazy"
                       referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
                   </div>

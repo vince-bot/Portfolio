@@ -6,7 +6,7 @@ export default function Document() {
       <title>VQ Front End Developer</title>
       <meta
         name="description"
-        content="Overview of my background, projects, and current programming and web development skills."
+        content="A Frontend Web Developer crafting fast, responsive websites with Next.js — plus smart CMS integration for easy content management and development skills."
       />
       <link rel="icon" href="/images/iconv2.webp" />
       <Head />
