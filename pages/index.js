@@ -26,7 +26,24 @@ export default function Home() {
   const [showNav, setShowNav] = useState(false);
   const [hasShadow, setHasShadow] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    // Simulate loading delay (2 seconds)
+    setTimeout(() => {
+      setIsLoading(false);
+      setShowModal(true);
+
+      // Hide modal after 3 seconds
+      setTimeout(() => {
+        setShowModal(false);
+      }, 3000);
+    }, 2000);
+  };
   const menus = [
     {
       url: "/",
@@ -450,7 +467,7 @@ export default function Home() {
                     and let's create something amazing together!
                   </p>
 
-                  <div>
+                  <div id="contacts">
                     <button className="mt-6 px-6 py-3 text-sm uppercase cursor-pointer bg-[#0073aa] text-white rounded border-2 border-[#0073aa] hover:bg-transparent hover:border-[#ffffff] w-fit">
                       Hire me
                     </button>
@@ -690,7 +707,7 @@ export default function Home() {
                     will get back to you as soon as possible
                   </p>
                   <div className="w-full ">
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                       <div>
                         <label
                           htmlFor="name"
@@ -737,9 +754,20 @@ export default function Home() {
                       <div className="">
                         <button
                           type="submit"
-                          className="border border-white text-sm text-white font-semibold py-3 px-8 rounded-md transition cursor-pointer hover:bg-white hover:text-[#1e3a5f]"
+                          disabled={isLoading}
+                          className={`border border-white text-sm text-white font-semibold py-3 px-8 rounded-md transition cursor-pointer 
+                          hover:bg-white hover:text-[#1e3a5f] ${
+                            isLoading ? "opacity-70 cursor-not-allowed" : ""
+                          }`}
                         >
-                          SUBMIT
+                          {isLoading ? (
+                            <span className="flex items-center justify-center gap-2">
+                              <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                              Sending...
+                            </span>
+                          ) : (
+                            "SUBMIT"
+                          )}
                         </button>
                       </div>
                     </form>
@@ -792,6 +820,17 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            {/* MODAL HERE */}
+            {showModal && (
+              <div className="fixed inset-0 flex items-center justify-center bg-black/70 bg-opacity-50 z-50">
+                <div className="bg-white text-[#1e3a5f] px-10 py-6 rounded-lg shadow-lg text-center animate-fade-in">
+                  <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
+                  <p className="text-sm">
+                    Thank you for reaching out. I’ll get back to you soon.
+                  </p>
+                </div>
+              </div>
+            )}
           </section>
           <footer className="bg-[#1e3a5f] text-white text-center pt-10 pb-4">
             &copy; {new Date().getFullYear()} Vince Quinaging. All rights
