@@ -290,7 +290,7 @@ export default function Home() {
     // {
     //   name: "Project One",
     //   description: "Description for project one.",
-    //   link: "https://www.discoveryshoresboracay.com/",
+    //   link: "https://discovery-hospitality.pages.dev/",
     //   image: "/images/project/shores.webp",
     // },
     {
