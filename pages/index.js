@@ -468,7 +468,11 @@ export default function Home() {
                   </p>
 
                   <div id="contacts">
-                    <button className="mt-6 px-6 py-3 text-sm uppercase cursor-pointer bg-[#0073aa] text-white rounded border-2 border-[#0073aa] hover:bg-transparent hover:border-[#ffffff] w-fit">
+                    <button
+                      className="
+                              mt-6 px-6 py-3 text-sm uppercase cursor-pointer bg-[#0073aa] text-white rounded border-2 border-[#0073aa] hover:bg-transparent hover:border-[#ffffff] transition-all duration-300 ease-in-out w-fit
+                            "
+                    >
                       Hire me
                     </button>
                   </div>
@@ -545,7 +549,9 @@ export default function Home() {
                     <Link
                       href="https://drive.google.com/file/d/1qL7SperlF9nG1uQTXtu_Hwi58XCA-ulh/view?usp=drive_link"
                       target="_blank"
-                      className="mt-4 inline-block text-sm px-6 py-3 uppercase cursor-pointer bg-[#1e3a5f] text-white rounded hover:bg-[#ffffff] border-2 hover:border-[#1e3a5f] hover:text-[#1e3a5f] font-semibold w-fit"
+                      className="
+    mt-4 inline-block text-sm px-6 py-3 uppercase cursor-pointer bg-[#1e3a5f] text-white rounded font-semibold w-fit hover:bg-white hover:border-[#1e3a5f] hover:text-[#1e3a5f] border-2 transition-all duration-300 ease-in-out
+  "
                     >
                       Download CV
                     </Link>
@@ -720,6 +726,7 @@ export default function Home() {
                           type="text"
                           placeholder="Enter Your Name"
                           className="w-full border border-white focus:border-blue-500 text-gray-200 px-4 py-3 rounded-md outline-none transition"
+                          required
                         />
                       </div>
                       <div>
@@ -734,6 +741,7 @@ export default function Home() {
                           type="email"
                           placeholder="Enter Your Email"
                           className="w-full border border-white focus:border-blue-500 text-gray-200 px-4 py-3 rounded-md outline-none transition"
+                          required
                         />
                       </div>
 
@@ -748,6 +756,7 @@ export default function Home() {
                           id="message"
                           rows="6"
                           placeholder="Enter Your Message"
+                          required
                           className="w-full border border-white focus:border-blue-500 text-gray-200 px-4 py-3 rounded-md outline-none resize-none transition"
                         ></textarea>
                       </div>
@@ -755,8 +764,7 @@ export default function Home() {
                         <button
                           type="submit"
                           disabled={isLoading}
-                          className={`border border-white text-sm text-white font-semibold py-3 px-8 rounded-md transition cursor-pointer 
-                          hover:bg-white hover:text-[#1e3a5f] ${
+                          className={`border border-white text-sm text-white font-semibold py-3 px-8 rounded-md transition-all duration-300 ease-in-out cursor-pointer hover:bg-white hover:text-[#1e3a5f] ${
                             isLoading ? "opacity-70 cursor-not-allowed" : ""
                           }`}
                         >
