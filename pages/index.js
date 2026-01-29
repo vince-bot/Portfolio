@@ -461,15 +461,15 @@ export default function Home() {
               className="w-full flex h-dvh p-5 xl:p-10 bg-[#1e3a5f]"
             >
               <div className="container">
-                <div className="flex flex-col lg:flex-row w-full h-full items-center justify-center lg:justify-start gap-10">
+                <div className="flex flex-col lg:flex-row w-full h-full items-center justify-center lg:justify-start ">
                   <div className="flex flex-col w-full lg:w-1/2 order-2 text-center md:text-start">
-                    <span className="text-4xl md:text-[50px] text-white">
-                      I'm{" "}
-                      <span className="text-[#0073aa] italic font-semibold">
-                        Vince Quinaging,
-                      </span>
+                    <span className="text-lg sm:text-2xl pb-2 text-white">
+                      Hello, I'm{" "}
                     </span>
-                    <span className="text-[20px] md:text-[50px] font-bold text-white">
+                    <span className="text-3xl sm:text-4xl md:text-[60px] text-[#0073aa] italic font-semibold">
+                      Vince Quinaging,
+                    </span>
+                    <span className="text-md md:text-[30px] font-bold text-white pb-5 md:pb-0">
                       Front End Developer
                     </span>
                     <p className="mt-1 md:mt-6 text-white leading-relaxed">
