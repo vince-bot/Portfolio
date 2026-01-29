@@ -450,7 +450,7 @@ export default function Home() {
             className="w-full flex h-dvh p-5 xl:p-10 bg-[#1e3a5f]"
           >
             <div className="container">
-              <div className="flex flex-col lg:flex-row w-full h-full items-center gap-10">
+              <div className="flex flex-col lg:flex-row w-full h-full items-center justify-center lg:justify-start gap-10">
                 <div className="flex flex-col w-full lg:w-1/2 order-2 text-center md:text-start">
                   <span className="text-2xl md:text-[50px] text-white">
                     I'm{" "}
@@ -646,39 +646,29 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
                 {displayedProjects.map((item, index) => (
                   <div key={index} className="rounded shadow">
-                    <div className="relative group w-full h-64 overflow-hidden flex transition-all duration-500">
+                    <div className="relative group w-full h-64 overflow-hidden">
+                      {/* Image */}
                       <Image
                         src={item.image}
                         alt={item.name}
                         width={1000}
                         height={1000}
                         loading="lazy"
-                        className="object-cover w-full h-full transition-all duration-500 ease-in-out"
+                        className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105"
                       />
 
-                      <div className="absolute inset-0 group-hover:bg-[#ffffff]/40 transition-all duration-700 ease-in-out" />
+                      {/* Dark overlay */}
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500" />
 
-                      <div className="absolute bottom-0 w-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
-                        <div className="flex w-full">
-                          <div className="w-1/2 flex items-center justify-center">
-                            <Link
-                              href={item.link}
-                              target="_blank"
-                              className="flex items-center justify-center cursor-pointer w-full h-[50px] bg-[#1e3a5f] text-white opacity-80 hover:opacity-100 hover:bg-[#122339] transition-all duration-500 ease-in-out"
-                            >
-                              <FaRegImage size={24} />
-                            </Link>
-                          </div>
-                          <div className="w-1/2 flex items-center justify-center">
-                            <Link
-                              href={item.link}
-                              target="_blank"
-                              className="flex items-center justify-center cursor-pointer w-full h-[50px] bg-[#1e3a5f] text-white opacity-80 hover:opacity-100 hover:bg-[#122339] transition-all duration-500 ease-in-out"
-                            >
-                              <LuLink size={24} />
-                            </Link>
-                          </div>
-                        </div>
+                      {/* Hover Button */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Link
+                          href={item.link || "#"}
+                          target="_blank"
+                          className="opacity-0 text-xs translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out bg-[#1e3a5f] hover:bg-white text-white hover:text-[#1e3a5f] border-2 border-[#1e3a5f] hover:border-white font-semibold px-6 py-3 rounded-full shadow-lg"
+                        >
+                          View Project
+                        </Link>
                       </div>
                     </div>
                   </div>
