@@ -442,7 +442,7 @@ export default function Home() {
 
           <button
             onClick={() => setShowNav(!showNav)}
-            className="fixed top-6 right-6 z-50 bg-[#1e3a5f] border-2 border-white text-white p-3 rounded-lg shadow-lg lg:hidden transition-all duration-300 hover:bg-[#122339]"
+            className="fixed top-6 right-6 z-50 cursor-pointer bg-[#1e3a5f] border-2 border-white text-white p-3 rounded-lg shadow-lg lg:hidden transition-all duration-300 hover:bg-[#122339]"
             aria-label="Toggle Navigation"
           >
             <BiMenu size={24} />
@@ -463,7 +463,7 @@ export default function Home() {
               <div className="container">
                 <div className="flex flex-col lg:flex-row w-full h-full items-center justify-center lg:justify-start gap-10">
                   <div className="flex flex-col w-full lg:w-1/2 order-2 text-center md:text-start">
-                    <span className="text-2xl md:text-[50px] text-white">
+                    <span className="text-4xl md:text-[50px] text-white">
                       I'm{" "}
                       <span className="text-[#0073aa] italic font-semibold">
                         Vince Quinaging,
