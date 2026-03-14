@@ -247,65 +247,65 @@ export default function Home() {
 
   const projects = [
     {
-      name: "Project One",
-      description: "Description for project one.",
-      link: "https://bnc-development-bbfbe.web.app/",
-      image: "/images/project/bnc.webp",
+      name: "Crimson Hotel",
+      description: "Description for project three.",
+      link: "https://www.crimsonhotel.com/",
+      image: "/images/project/crimson.webp",
     },
     {
-      name: "Project Three",
+      name: "Discovery Hospitality",
       description: "Description for project three.",
       link: "https://discovery-hospitality.pages.dev/",
       image: "/images/project/hospitality.webp",
     },
     {
-      name: "Project One",
+      name: "Quest Hotels and Resorts",
       description: "Description for project one.",
       link: "https://www.questhotelsandresorts.com/",
       image: "/images/project/quest.webp",
     },
     {
-      name: "Project Two",
+      name: "Azure Beach Clubs",
       description: "Description for project two.",
       link: "https://www.azurebeachclubs.com/",
       image: "/images/project/azure1.webp",
     },
     {
-      name: "Project Three",
+      name: "Yantra Seeds",
       description: "Description for project three.",
       link: "https://www.yantraseeds.com/",
       image: "/images/project/yantra.webp",
     },
     {
-      name: "Project Three",
+      name: "Discovery Hospitality",
       description: "Description for project three.",
       link: "https://discoveryhospitality.com/",
       image: "/images/project/discovery-hospitality.webp",
     },
     {
-      name: "Project Three",
+      name: "Discovery Suites",
       description: "Description for project three.",
       link: "https://www.discoverysuites.com/",
       image: "/images/project/suites.webp",
     },
-    // {
-    //   name: "Project One",
-    //   description: "Description for project one.",
-    //   link: "https://discovery-hospitality.pages.dev/",
-    //   image: "/images/project/shores.webp",
-    // },
+    {
+      name: "Project One",
+      description: "Description for project one.",
+      link: "https://discovery-hospitality.pages.dev/",
+      image: "/images/project/shores.webp",
+    },
     {
       name: "Project Two",
       description: "Description for project two.",
       link: "https://www.clubparadisepalawan.com/",
       image: "/images/project/club-paradise.webp",
     },
-    // {
-    //   name: "Project Three",
-    //   description: "Description for project three.",
-    //   link: "https://discovery-primea.pages.dev/",
-    //   image: "/images/project/primea.webp",
-    // },
+    {
+      name: "Project Three",
+      description: "Description for project three.",
+      link: "https://discovery-primea.pages.dev/",
+      image: "/images/project/primea.webp",
+    },
     {
       name: "Project Three",
       description: "Description for project three.",
@@ -319,10 +319,16 @@ export default function Home() {
       image: "/images/project/bpi.webp",
     },
     {
-      name: "Project Three",
+      name: "The Voting Vault",
       description: "Description for project three.",
       link: "https://thevotingvault.com/",
       image: "/images/project/voting-vault.webp",
+    },
+    {
+      name: "BNC Development",
+      description: "Description for project one.",
+      link: "https://bnc-development-bbfbe.web.app/",
+      image: "/images/project/bnc.webp",
     },
   ];
 
@@ -563,9 +569,7 @@ export default function Home() {
                       <Link
                         href="https://drive.google.com/file/d/1qL7SperlF9nG1uQTXtu_Hwi58XCA-ulh/view?usp=drive_link"
                         target="_blank"
-                        className="
-    mt-4 inline-block text-sm px-6 py-3 uppercase cursor-pointer bg-[#1e3a5f] text-white rounded font-semibold w-fit hover:bg-white hover:border-[#1e3a5f] hover:text-[#1e3a5f] border-2 transition-all duration-300 ease-in-out
-  "
+                        className="mt-4 inline-block text-sm px-6 py-3 uppercase cursor-pointer bg-[#1e3a5f] text-white rounded font-semibold w-fit hover:bg-white hover:border-[#1e3a5f] hover:text-[#1e3a5f] border-2 transition-all duration-300 ease-in-out"
                       >
                         Download CV
                       </Link>
