@@ -45,6 +45,22 @@ export default function Home() {
       }, 3000);
     }, 2000);
   };
+
+  const fullText = "Vince Quinaging";
+  const [text, setText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < fullText.length) {
+      const timeout = setTimeout(() => {
+        setText((prev) => prev + fullText[index]);
+        setIndex(index + 1);
+      }, 100); // speed
+
+      return () => clearTimeout(timeout);
+    }
+  }, [index]);
+
   const menus = [
     {
       url: "/",
@@ -421,10 +437,16 @@ export default function Home() {
             </nav>
 
             <div className="flex mt-auto pb-4 text-gray-300 text-sm gap-x-4">
-              <Link href="#" target="_blank">
+              <Link
+                href="https://www.facebook.com/dekaronz.vince12/"
+                target="_blank"
+              >
                 <FaFacebook size={24} />
               </Link>
-              <Link href="#" target="_blank">
+              <Link
+                href="https://www.instagram.com/vquinaging/"
+                target="_blank"
+              >
                 <FaInstagram size={24} />
               </Link>
               <Link href="#" target="_blank">
@@ -467,22 +489,26 @@ export default function Home() {
               className="w-full flex h-dvh p-5 xl:p-10 bg-[#1e3a5f]"
             >
               <div className="container">
-                <div className="flex flex-col lg:flex-row w-full h-full items-center justify-center lg:justify-start ">
-                  <div className="flex flex-col w-full lg:w-1/2 order-2 text-center md:text-start">
-                    <span className="text-lg sm:text-2xl pb-2 text-white">
-                      Hello, I'm{" "}
+                <div className="flex flex-col lg:flex-row w-full h-full items-center justify-center">
+                  <div className="flex flex-col text-center w-full">
+                    <span className="text-lg sm:text-4xl pb-2 text-white">
+                      I'm{" "}
                     </span>
-                    <span className="text-3xl sm:text-4xl md:text-[60px] text-[#0073aa] italic font-semibold">
-                      Vince Quinaging,
+                    <span className="text-3xl sm:text-4xl md:text-[80px] text-[#0073aa] uppercase font-bold">
+                      {text}
+                      <span className="animate-pulse">|</span>
                     </span>
                     <span className="text-md md:text-[30px] font-bold text-white pb-5 md:pb-0">
                       Front End Developer
                     </span>
-                    <p className="mt-1 md:mt-6 text-white leading-relaxed">
-                      A passionate Front End Developer dedicated to crafting
-                      engaging and user-friendly web experiences. Explore my
-                      work and let's create something amazing together!
-                    </p>
+
+                    <div className="flex w-full justify-center">
+                      <p className="mt-1 md:mt-6 text-white leading-relaxed max-w-xl sm:text-lg">
+                        A passionate Front End Developer dedicated to crafting
+                        engaging and user-friendly web experiences. Explore my
+                        work and let's create something amazing together!
+                      </p>
+                    </div>
 
                     <div id="contacts">
                       <button
@@ -493,16 +519,6 @@ export default function Home() {
                         Hire me
                       </button>
                     </div>
-                  </div>
-                  <div className="flex w-full justify-center lg:w-1/2 order-1 lg:order-2">
-                    <Image
-                      src="/images/bannerv2.webp"
-                      alt="#"
-                      width={1000}
-                      height={1000}
-                      priority
-                      className="object-cover w-[500px] h-full transition-all duration-500 ease-in-out"
-                    />
                   </div>
                 </div>
               </div>
